@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to helloWorld's documentation! (make some changes)
-======================================
+==========================================================
 
 .. toctree::
    :maxdepth: 2
