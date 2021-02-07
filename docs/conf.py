@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'helloWorld'
-copyright = '2020, Michael Altfield'
-author = 'Michael Altfield'
+project = 'Sphinx Documentation'
+copyright = '2021, Lejen'
+author = 'Lejen'
 
 # The short X.Y version
 version = ''
@@ -67,6 +67,8 @@ master_doc = 'index'
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
+locale_dirs = ['locale/']
+gettext_compact = True
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -110,7 +112,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'helloWorlddoc'
+htmlhelp_basename = 'SphixDocumentationdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -137,8 +139,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'helloWorld.tex', 'helloWorld Documentation',
-     'Michael Altfield', 'manual'),
+    (master_doc, 'SphixDocumentation.tex', 'SphixDocumentation Documentation',
+     'Lejen', 'manual'),
 ]
 
 
@@ -147,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'helloworld', 'helloWorld Documentation',
+    (master_doc, 'SphixDocumentation', 'SphixDocumentation Documentation',
      [author], 1)
 ]
 
@@ -158,8 +160,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'helloWorld', 'helloWorld Documentation',
-     author, 'helloWorld', 'One line description of project.',
+    (master_doc, 'SphixDocumentation', 'SphixDocumentation Documentation',
+     author, 'SphixDocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -187,7 +189,8 @@ epub_exclude_files = ['search.html']
 # add sourcecode to path
 import sys, os
 sys.path.insert(0, os.path.abspath('../src'))
- 
+
+
 ############################
 # SETUP THE RTD LOWER-LEFT #
 ############################
@@ -268,8 +271,16 @@ html_context['downloads'].append( ('epub', '/' +REPO_NAME+ '/' +current_language
 # "EDIT ON GITHUB" LINKS #
 ##########################
  
-html_context['display_github'] = True
-html_context['github_user'] = 'lejen-code'
-html_context['github_repo'] = 'rtd-github-pages'
-html_context['github_version'] = 'master/docs/'
+# html_context['display_github'] = True
+# html_context['github_user'] = 'lejen-code'
+# html_context['github_repo'] = 'rtd-github-pages'
+# html_context['github_version'] = 'master/docs/'
  
+ # replace "view page source" with "edit on github" in Read The Docs theme
+#  * https://github.com/readthedocs/sphinx_rtd_theme/issues/529
+html_context = {
+	'display_github': True,
+	'github_user': 'lejen-code',
+	'github_repo': 'rtd-github-pages',
+	'github_version': 'master/docs/',
+}
