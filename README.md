@@ -1,4 +1,4 @@
-![docs_pages_workflow](https://github.com/maltfield/rtd-github-pages/workflows/docs_pages_workflow/badge.svg?branch=master)
+![docs_pages_workflow](https://github.com/lejen-code/rtd-github-pages/workflows/docs_pages_workflow/badge.svg?branch=master)
 
 # Continuous Documentation: Hosting Read the Docs on GitHub Pages
 
