@@ -7,11 +7,14 @@
 ..    :maxdepth: 2
 ..    :caption: Contents:
 
-Welcome to `_project_` docs!
-============================
+Welcome to `Sphinx Documentation`!
+==================================
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
+   Setup Virtual Environment
    helloworld
 
 
